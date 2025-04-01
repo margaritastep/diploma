@@ -11,6 +11,10 @@ lithography process simulator
 1.   *Добавить способ расчёта этапа диффузии при постэкспозиционной сушке для химически усиленных резистов*, для которых этот этап имеет кардинальное отличие.
 2.   *Максимально упростить запуск расчётов с помошью переноса их в один ноутбук.* Т.к. для запуска САПР Optolithium требуется виртуальная машина, установка большого кол-ва библиотек, а также в batch-режиме многократный перезапуск программы, если мы хотим подбирать параметры в цикле.
 
+Входные данные: матрица распределений интенсивности.
+
+Выходные данные: контуры проявления структуры, размер смоделированной структуры, среднквадратичная ошибка модели.
+
 В процессе оформления кода использовался ИИ DeepSeek.
 
 # Описание модулей
@@ -57,3 +61,24 @@ lithography process simulator
 
 *есть нюансы при работе на Windows, см. далее.
 
+# Решение ошибки с библиотекой pykonal на Windows
+
+В Google Colab всё ОК, проблемы появляются, если попробовать запустить код на компьютере с ОС Windows, например, в Jupyter Notebook.
+
+Проблема и её решение описаны здесь здесь:
+
+https://github.com/malcolmw/pykonal/pull/46
+
+Достаточно поменять строчку в пакете и снова установить библиотеку.
+
+# Источники
+
+1. https://github.com/xthebat/optolithium
+2. Mack C. Fundamental principles of optical lithography: the science of microfabrication. – John Wiley & Sons, 2007.
+3. Smith M. D., Byers J. D., Mack C. A. The lithographic impact of resist model parameters //Advances in Resist Technology and Processing XXI. – SPIE, 2004. – Т. 5376. – С. 322-332.
+4. Robertson S. A., Mack C. A., Maslow M. J. Toward a universal resist dissolution model for lithography simulation / под ред. C. A. Mack, T. Stevenson. Edinburgh, United Kingdom: , 2001. С. 111.
+5. Mack C. CHE 323, Chemical Processes for Micro- and Nanofabrication: [Электронный ресурс]. URL:  https://www.lithoguru.com/scientist/CHE323/course.html  (Дата обращения: 14.01.2025)
+6. Mack C. A. Development of Positive Photoresists // J. Electrochem. Soc. 1987. Т. 134. № 1. С. 148–152.
+7. Mack C. A. New Kinetic Model for Resist Dissolution // J. Electrochem. Soc. 1992a. Т. 139. № 4. С. L35–L37.
+8. Mack C. A. Notch Model for Resist Dissolution // J. Electrochem. Soc. 1992b. Т. 139. № 4. С. L35–L37.
+9. Robertson S. A. et al. Improved notch model for resist dissolution in lithography simulation //Advances in Resist Technology and Processing XVIII. – SPIE, 2001. – Т. 4345. – С. 912-920.
