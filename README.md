@@ -22,8 +22,6 @@ lithography process simulator
 
 Проект в стадии разработки! На данный момент поддерживает только 2D распределения интенсивностей, т.е., одномерные структуры. Однако, легко может быть расширен и на 3D случай.
 
-В процессе оформления кода использовался ИИ DeepSeek.
-
 # Мотивация
 
 САПР Optolithium во многом был использован в данной работе как опорная точка, т.к. он также позволяет проводить процессное моделирование. Однако, главной его проблемой является тот факт, что в нём недоступно моделирование этапа постэкспозиционной сушки для **резистов с химическим усилением**, использующихся сейчас повсеместно.
@@ -94,3 +92,5 @@ https://github.com/malcolmw/pykonal/pull/46
 7. Mack C. A. New Kinetic Model for Resist Dissolution // J. Electrochem. Soc. 1992a. Т. 139. № 4. С. L35–L37.
 8. Mack C. A. Notch Model for Resist Dissolution // J. Electrochem. Soc. 1992b. Т. 139. № 4. С. L35–L37.
 9. Robertson S. A. et al. Improved notch model for resist dissolution in lithography simulation //Advances in Resist Technology and Processing XVIII. – SPIE, 2001. – Т. 4345. – С. 912-920.
+
+В процессе оформления кода использовался ИИ DeepSeek.
